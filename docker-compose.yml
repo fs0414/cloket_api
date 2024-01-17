@@ -1,9 +1,9 @@
 version: '3'
 services:
   api:
-    container_name: lt_api_container
+    container_name: bookcase_api
     build:
-      context: ../api_lt
+      context: ../api_bookcase
       dockerfile: ./.docker/Dockerfile
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -18,7 +18,7 @@ services:
     ports:
       - 3000:3000
   db:
-    container_name: lt_db_container
+    container_name: bookcase_db
     image: postgres
     ports:
       - 5432:5432
