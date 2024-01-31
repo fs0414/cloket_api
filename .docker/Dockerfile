@@ -1,4 +1,4 @@
-FROM ruby:3.2.2-alpine3.18
+FROM ruby:3.2.2-alpine
 
 RUN apk update -qq && apk add gcompat libpq-dev nodejs vim g++ make
 
