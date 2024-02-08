@@ -31,7 +31,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - db_temp_volume:/var/lib/postgresql/data
+      - db_cloket_volume:/var/lib/postgresql/data
     environment:
       POSTGRES_ROOT_PASSWORD: ${POSTGRES_ROOT_PASSWORD}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -39,4 +39,4 @@ services:
       POSTGRES_DEV_DATABASE: ${POSTGRES_DEV_DATABASE}
 
 volumes:
-  db_temp_volume:
+  db_cloket_volume:
